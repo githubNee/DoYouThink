@@ -18,10 +18,6 @@ router.route('/public')
 				ret['items'][index]['fsize'] = (fsize / 1024).toFixed(2).toString() + 'KB';
 			else
 				ret['items'][index]['fsize'] = (fsize / 1024 / 1024).toFixed(2).toString() + 'MB';
-
-			var nDate = new Date();
-			nDate.setTime(ret['items'][index]['putTime'] / 10000);
-			ret['items'][index]['putTime'] = nDate.toLocaleDateString().split('T')[0];
 		}
 		res.send(ret);
 	});
