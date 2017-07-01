@@ -12,7 +12,6 @@ var config = {
 		"private": ""
 	},
 	"admin": {
-		"name": "",
 		"password": ""
 	}
 };
