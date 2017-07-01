@@ -1,0 +1,21 @@
+{
+  "name": "doyouthink",
+  "version": "1.0.0",
+  "description": "my home page",
+  "main": "index.js",
+  "scripts": {
+    "test": "supervisor index.js",
+    "start": "pm2 start index.js"
+  },
+  "author": "nee",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "pm2": "^2.5.0",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "supervisor": "^0.12.0"
+  }
+}
