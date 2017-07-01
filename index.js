@@ -4,8 +4,8 @@ var http = require('http');
 var server = http.createServer(app);
 
 var path = require('path');
-var port = process.env.PORT || 8080;
-server.listen(port);
+var port = process.env.PORT || 6666;
+server.listen(port, '0.0.0.0');
 var request = require('request');
 var bodyParser = require('body-parser');
 
