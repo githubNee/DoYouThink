@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var config = require('../config.js');
+var token_helper = require('../util/util.js');
 
 router.route('/login')
 .post((req, res, next) => {
@@ -9,7 +10,8 @@ router.route('/login')
 	} else {
 			password = req.body['password'];
 		if (password === config.admin.password) {
-			res.sendStatus(200);
+			var token = token_helper.getToken();
+			res.send(token);
 		} else {
 			res.sendStatus(401);
 		}

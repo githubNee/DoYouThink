@@ -16,6 +16,11 @@ function qiniu_request(url, method, callback) {
 	});
 }
 
+function getToken() {
+	return config.mac.accessKey;
+}
+
 module.exports = {
+	getToken: getToken,
 	qiniu_request: qiniu_request
 }
